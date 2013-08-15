@@ -6,7 +6,7 @@ You'll need to open the directory Chrome uses to store User Stylesheets in.
 
 - Windows: `C:\Users\username\AppData\Local\Google\Chrome\User Data\Default\User Stylesheets\`
 - OSX: `~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/`
-- Chrome OS: `~/User\ StyleSheets/` (requires developer mode)
+- Chrome OS: `~/User\ StyleSheets/` (requires [developer mode](https://sites.google.com/site/chromeoswikisite/home/what-s-new-in-dev-and-beta/developer-mode))
 
 1. Open the directory applicable to your OS *(see above)*.
 2. Backup `Custom.css`
