@@ -10,12 +10,6 @@
 	font-family: "Source Code Pro", Menlo, "Consolas", monospace !important;
 }
 
-/*	Html inspect area
-------------------------------------------------*/
-#elements-content * {
-
-}
-
 /* animation settings */
 #elements-content .parent,
 #elements-content .parent * {
@@ -151,9 +145,6 @@
 
 /*	JavaScript Style
 ------------------------------------------------*/
-[class^="webkit-javascript"] {
-
-}
 
 .webkit-javascript-string {
 	color: #3F8EBB !important;
@@ -201,15 +192,6 @@
 	font-weight: bold;
 }
 
-#-webkit-web-inspector .console-error-level .console-message-text,
-#-webkit-web-inspector .console-error-level .section .header .title {
-
-}
-
-#-webkit-web-inspector .console-error-level .children .source-code {
-
-}
-
 #-webkit-web-inspector .console-error-level .properties-tree {
 	font-weight: normal !important;
 }
@@ -235,19 +217,4 @@
 
 #-webkit-web-inspector .console .name {
 	color: #16a085 !important;
-}
-
-
-/*  Source Code - Pane
-------------------------------------------------*/
-
-/* Generic */
-
-#-webkit-web-inspector #main-panels .pane > .title,
-#-webkit-web-inspector #main-panels .sidebar-separator,
-#-webkit-web-inspector #main-panels .sidebar-pane-subtitle {
-
-}
-
-#-webkit-web-inspector .split-view-sidebar-right .webkit-css-property {
 }
