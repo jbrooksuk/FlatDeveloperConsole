@@ -218,3 +218,37 @@
 #-webkit-web-inspector .console .name {
 	color: #16a085 !important;
 }
+
+#-webkit-web-inspector #toolbar {
+	background: rgb(236, 240, 241) !important;
+	border-bottom: 1px solid rgb(189, 195, 199) !important;
+	border-top: none;
+	height: 34px !important;
+}
+
+#-webkit-web-inspector.show-toolbar-icons .toolbar-icon {
+	display: none !important;
+}
+
+#-webkit-web-inspector .toolbar-label {
+	color: rgb(44, 62, 80) !important;
+	position: relative !important;
+	line-height: 24px !important;
+	font-size: 14px;
+	min-width: 60px;
+	max-width: 60px;
+	-webkit-box-sizing: border-box;
+}
+
+#-webkit-web-inspector #toolbar > button {
+	box-shadow: none !important;
+	padding: 2px 14px !important;
+	margin-bottom: 11px !important;
+	cursor: pointer !important;
+}
+
+#-webkit-web-inspector #toolbar > .toolbar-item.toggleable.toggled-on {
+	border: none !important;
+	font-weight: bold;
+	background: none;
+}
