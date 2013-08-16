@@ -5,6 +5,7 @@ Basic FlatUI inspired Google Chrome Developer Console stylesheet.
 You'll need to open the directory Chrome uses to store User Stylesheets in.
 
 - Windows: `C:\Users\username\AppData\Local\Google\Chrome\User Data\Default\User Stylesheets\`
+- Linux: `~/.config/google-chrome/Default/User StyleSheets/`
 - OSX: `~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/`
 - Chrome OS: `~/User\ StyleSheets/` (requires [developer mode](https://sites.google.com/site/chromeoswikisite/home/what-s-new-in-dev-and-beta/developer-mode))
 
