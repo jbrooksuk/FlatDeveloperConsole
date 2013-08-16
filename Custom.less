@@ -1,0 +1,261 @@
+/**
+ * Flat Chrome Console
+ * A Flat UI inspired Google Chrome Developer Console Stylesheet.
+ * @author James Brooks @jbrooksuk
+ * @license MIT - https://jbrooksuk.mit-license.org
+ */
+
+// Flat UI Colors
+@turquoise:     #1abc9c;
+@green-sea:     #16a085;
+@emerald:       #2ecc71;
+@nephritis:     #27ae60;
+@peter-river:   #3498db;
+@belize-hole:   #2980b9;
+@amethyst:      #9b59b6;
+@wisteria:      #8e44ad;
+@wet-asphalt:   #34495e;
+@midnight-blue: #2c3e50;
+@sun-flower:    #f1c40f;
+@orange:        #f39c12;
+@carrot:        #e67e22;
+@pumpkin:       #d35400;
+@alizarin:      #e74c3c;
+@pomegranate:   #c0392b;
+@clouds:        #ecf0f1;
+@silver:        #bdc3c7;
+@concrete:      #95a5a6;
+@asbestos:      #7f8c8d;
+
+// Re-usable colors
+@number: @wisteria;
+@property: @pumpkin;
+@comment: @green-sea;
+@boolean: @pomegranate;
+@toolbar-height: 34px;
+@toolbar-item-width: 100px;
+@border-solid: solid 1px @silver;
+@border-dashed: dashed 1px @silver;
+@selected: @emerald;
+
+#-webkit-web-inspector {
+	// Typography
+	.monospace, .source-code {
+		font-size: 12px !important;
+		line-height: 1.2em !important;
+		font-family: "Source Code Pro", Menlo, "Consolas", monospace !important;
+	}
+	// Toolbar
+	&.show-toolbar-icons .toolbar-icon {
+		display: none !important;
+	}
+	#toolbar {
+		background: @clouds !important;
+		border-bottom: 1px solid @silver !important;
+		border-top: none;
+		height: @toolbar-height !important;
+		padding: 0 !important;
+		margin: 0 !important;
+
+		.toolbar-label {
+			color: @midnight-blue !important;
+			position: relative !important;
+			line-height: 24px !important;
+			font-size: 14px;
+			-webkit-box-sizing: border-box;
+		}
+
+		> button {
+			-webkit-box-sizing: border-box;
+			box-shadow: none !important;
+			padding: 3px 14px !important;
+			margin-bottom: 11px !important;
+			cursor: pointer !important;
+			border: none !important;
+			min-width: @toolbar-item-width !important;
+			max-width: @toolbar-item-width !important;
+		}
+
+		>.toolbar-item.toggleable.toggled-on {
+			-webkit-box-sizing: border-box;
+			// border-top: solid 3px @nephritis !important;
+			border-left: none !important;
+			border-right: none !important;
+			border-bottom: none !important;
+			font-weight: bold;
+		}
+	}
+	// Main parent
+	#main {
+		margin: 0 !important;
+		padding: 0 !important;
+		top: @toolbar-height !important;
+
+		.split-view-sidebar {
+			background-color: @clouds !important;
+			border-right: @border-solid !important;
+			/*ol li.selected {
+				background: @selected !important;
+				border: none !important;
+				background-image: none !important;
+			}*/
+		}
+	}
+	// Elements Content
+	.elements {
+		.selector-matches {
+			color: @midnight-blue !important;
+			background: @sun-flower !important;
+			font-weight: bold;
+		}
+		.selected {
+			background: @clouds !important;
+			border: @border-solid !important;
+		}
+		#elements-content {
+			&.source-code {
+				background: lighten(@clouds, 5%) !important;
+			}
+			.parent {
+				border: 1px solid transparent;
+				&.expanded {
+					background-color: darken(@clouds, 1%);
+					border: @border-solid !important;
+					border-radius: 0 0 3px 3px;
+					margin-bottom: 10px !important;
+				}
+				&.selected {
+					background: darken(@clouds, 10%);
+					border-radius: 3px;
+					color: @midnight-blue !important;
+				}
+				&.selected + *.expanded {
+					background-color: lighten(@clouds, 5%) !important;
+					border-left: @border-dashed !important;
+					border-bottom: @border-dashed !important;
+					border-right: @border-dashed !important;
+					border-radius: 0 0 3px 3px;
+					margin-bottom: 10px !important;
+				}
+			}
+			.highlight {
+				color: @alizarin !important;
+				line-height: 13px;
+				font-size: 12px;
+				// Shared Inspector styles
+				.webkit-css-comment, .webkit-html-comment, .webkit-javascript-comment {
+					color: @comment !important;
+					font-style: italic !important;
+				}
+				.webkit-css-number, .webkit-html-number, .webkit-javascript-number {
+					color: @number !important;
+				}
+				// CSS Inspector
+				.webkit-css-selector {
+					color: lighten(@alizarin, 20%) !important;
+					font-weight: bold;
+				}
+				.webkit-css-url, .webkit-css-color, .webkit-css-string, .webkit-css-keyword, .webkit-css-selector {
+					color: @belize-hole !important;
+				}
+				.webkit-css-important {
+					color: @alizarin !important;
+					font-weight: bold;
+				}
+				.webkit-css-property, .webkit-css-at-rule {
+					color: @property !important;
+					font-weight: bold;
+				}
+				// HTML
+				.webkit-html-tag, .webkit-html-doctype {
+					color: @carrot !important;
+					font-style: italic !important;
+					font-weight: bold;
+				}
+				.webkit-html-text-node, .webkit-html-css-node, .webkit-html-js-node {
+					color: @midnight-blue !important;
+					font-weight: normal;
+				}
+				.webkit-html-attribute-name {
+					color: @belize-hole !important;
+					font-weight: normal !important;
+				}
+				.webkit-html-attribute-value {
+					color: @peter-river !important;
+					font-weight: normal !important;
+				}
+				// JavaScript
+				.webkit-javascript-string {
+					color: @peter-river !important;
+				}
+				.webkit-javascript-keyword {
+					color: @pomegranate !important;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	// Console
+	#console-messages {
+		a {
+			color: @pomegranate !important;
+			&:hover {
+				color: @alizarin !important;
+			}
+		}
+		.console-formatted-boolean {
+			color: @boolean !important;
+			font-weight: bold;
+		}
+		.console-error-level {
+			.properties-tree {
+				font-weight: normal;
+			}
+		}
+		.console {
+			.console-message, .console-user-command {
+				border: 0px !important;
+				border-bottom:1px dashed @silver !important;
+				padding: 2px 0 !important;
+				line-height: 1.2em !important;
+			}
+			.console-formatted-object {
+				color: @amethyst !important;
+			}
+			.console-formatted-string {
+				color: @belize-hole !important;
+			}
+			.name {
+				color: @green-sea !important;
+			}
+		}
+	}
+	// Status bar
+	#main-status-bar.status-bar {
+		background: @clouds !important;
+		border-top: 1px solid @silver !important;
+		padding: 0;
+
+		.crumbs {
+			.crumb {
+				font-size: 13px !important;
+				color: @midnight-blue;
+			}
+			.crumb.selected {
+				color: @clouds;
+				background: @nephritis !important;
+				-webkit-border-image: none !important;
+			}
+		}
+	}
+	// Platform settings
+	&.platform-mac {
+
+	}
+	&.platform-windows {
+		
+	}
+}
+
+// Animations
+// @NOTE: This needs to be redone.
