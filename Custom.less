@@ -119,23 +119,24 @@
 			.parent {
 				border: 1px solid transparent;
 				&.expanded {
+					box-sizing: border-box !important;
 					background-color: darken(@clouds, 1%);
 					border: @border-solid !important;
 					border-radius: 0 0 3px 3px;
-					margin-bottom: 10px !important;
 				}
 				&.selected {
+					box-sizing: border-box !important;
 					background: darken(@clouds, 10%);
 					border-radius: 3px;
 					color: @midnight-blue !important;
 				}
 				&.selected + *.expanded {
+					box-sizing: border-box !important;
 					background-color: lighten(@clouds, 5%) !important;
 					border-left: @border-dashed !important;
 					border-bottom: @border-dashed !important;
 					border-right: @border-dashed !important;
 					border-radius: 0 0 3px 3px;
-					margin-bottom: 10px !important;
 				}
 			}
 			.highlight {
