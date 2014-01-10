@@ -1,4 +1,4 @@
-# Flat Developer Console
+# Flat Developer Console [![Gittip](http://badgr.co/gittip/jbrooksuk.png)](https://www.gittip.com/jbrooksuk/)
 Basic FlatUI inspired Google Chrome Developer Console stylesheet.
 
 # Installation
